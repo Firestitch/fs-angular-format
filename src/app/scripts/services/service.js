@@ -5,7 +5,7 @@
      * @ngdoc service
      * @name fs.services:fsFormat
      */
-    angular.module('fs-angular-format',[])
+    angular.module('fs-angular-format')
     .factory('fsFormat', function($filter) {
 
 	    var service = {

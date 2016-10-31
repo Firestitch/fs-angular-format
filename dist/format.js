@@ -7,7 +7,7 @@
      * @param {integer} bytes Bytes to be converted
      * @param {integer} precision How many decimals to use
 	 */
-    angular.module('fs-angular-format')
+    angular.module('fs-angular-format',[])
     .filter('fsFormatBytes', function(fsFormat) {
 	    return function(bytes, precision) {
 	    	return fsFormat.bytes(bytes, precision);
