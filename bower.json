@@ -1,0 +1,16 @@
+{
+  "name": "fs-angular-format",
+  "description": "",
+  "main": [
+    "dist/format.js"
+  ],
+  "authors": [
+    "Firestitch Inc."
+  ],
+  "license": "MIT",
+  "ignore": [
+    "src",
+    ".gitignore"
+  ],
+  "private": false
+}
