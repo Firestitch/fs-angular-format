@@ -3,7 +3,6 @@
 	/**
      * @ngdoc filter
      * @name fs.filter:fsFormatBytes
-     * @restrict E
      * @param {integer} bytes Bytes to be converted
      * @param {integer} precision How many decimals to use
 	 */
@@ -17,7 +16,6 @@
 	/**
      * @ngdoc filter
      * @name fs.filter:fsFormatPercent
-     * @restrict E
      * @param {decimal} number The number to be rounded
      * @param {integer} precision How many decimals to use
 	 */
@@ -29,8 +27,7 @@
 
 	/**
      * @ngdoc filter
-     * @name fs.filter:fsFormatPercent
-     * @restrict E
+     * @name fs.filter:fsFormatCurrency
      * @param {decimal} number The number to be rounded
      * @param {integer} precision How many decimals to use
 	 */
