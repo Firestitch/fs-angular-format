@@ -6,12 +6,13 @@
      * @name fs.services:fsFormat
      */
     angular.module('fs-angular-format')
-    .factory('fsFormat', function($filter) {
+    .factory('fsFormat', function($filter, fsUtil) {
 
 	    var service = {
 	    	percent: percent,
 	    	bytes: bytes,
-	    	currency: currency
+	    	currency: currency,
+	    	phone: phone
 	    };
 
 	    return service;
@@ -65,6 +66,19 @@
 
   			precision = precision || 0;
     		return $filter('currency')(amount, symbol, precision);
+  		}
+
+	    /**
+	     * @ngdoc method
+	     * @methodOf fs.services:fsFormat
+	     * @name phone
+	     * @param {string} phone The phone number to be fromatted
+     	 */
+	    function phone(phone) {
+
+	    	var phone = fsUtil.string(phone).replace(/[^\d]/g,'');
+
+    		return phone.replace(/(\d{3})(\d{3})(\d{4})/,'($1) $2-$3');
   		}
   	});
 

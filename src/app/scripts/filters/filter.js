@@ -35,6 +35,17 @@
   		return function(amount, precision, symbol) {
 	    	return fsFormat.currency(amount, precision, symbol);
 	    }
+  	})
+
+  	/**
+     * @ngdoc filter
+     * @name fs.filter:fsFormatPhone
+     * @param {string} phone The phone number to be formatted
+	 */
+	.filter('fsFormatPhone',function (fsFormat) {
+  		return function(phone) {
+	    	return fsFormat.phone(phone);
+	    }
   	});
 
 })();
