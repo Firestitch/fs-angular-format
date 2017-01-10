@@ -18,10 +18,11 @@
      * @name fs.filter:fsFormatPercent
      * @param {decimal} number The number to be rounded
      * @param {integer} precision How many decimals to use
+     * @param {boolean} multiply If the value should be multiplied by 100
 	 */
 	.filter('fsFormatPercent',function (fsFormat) {
-  		return function(number, precision) {
-	    	return fsFormat.percent(number, precision);
+  		return function(number, precision, multiply) {
+	    	return fsFormat.percent(number, precision, multiply);
 	    }
   	})
 

@@ -42,10 +42,11 @@
 	     * @name percent
 	     * @param {decimal} number The number to be rounded
      	 * @param {integer} precision How many decimals to use
+     	 * @param {boolean} multiply If the value should be multiplied by 100
 	     */
-	    function percent(number, precision) {
+	    function percent(number, precision, multiply) {
   			precision = precision || 0;
-    		return $filter('number')(number * 100, precision) + '%';
+    		return $filter('number')(number * (multiply ? 100 : 1), precision) + '%';
   		}
 
 	    /**
