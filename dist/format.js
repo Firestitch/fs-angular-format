@@ -114,7 +114,7 @@
 
 	    	if(symbol=='EUR') {
 	    		symbol = '€';
-	    	} else {
+	    	} else if (symbol == 'USD' || symbol === undefined) {
 	    		symbol = '$';
 	    	}
 
